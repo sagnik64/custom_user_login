@@ -28,7 +28,7 @@ class CustomAuthController extends Controller
     //    if(!($isValid)) {
     //     return ["Result"=>"Invalid Email or Password"];  
     //    }
-       $user = new User();
+       $user = new User;
        $user->name = $request->name;
        $user->email = $request->email;
        $user->password = $request->password;

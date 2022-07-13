@@ -28,13 +28,13 @@ Route::get('data/{id}',[CustomAuthController::class,'getDataByID']);
 Route::post('save',[CustomAuthController::class,'postData']);
 
 //to save user data in DB
-Route::post('/register_user',[CustomAuthController::class, "registerUser"]); 
+Route::post('/register_user',[CustomAuthController::class, "registerUser"])->name('register_user'); 
 
 //to update user data by ID (ID is in Request)
 Route::put('/update',[CustomAuthController::class, "editData"]);
 
 //to validate login
-Route::post('/login_user',[CustomAuthController::class, "loginUser"]);
+Route::post('/login_user',[CustomAuthController::class, "loginUser"])->name('login_user');
 
 //to search by starting letters of name
 Route::get('/search/{name}',[CustomAuthController::class, "searchByName"]);

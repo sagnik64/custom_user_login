@@ -13,7 +13,7 @@
         <div class="col-md-4 col-md-offset-4" style="margin-top:25px;">
         <h3>Registration</h3>
         <hr>  
-        <form action="{{route('register_user')}}" method="post">
+        <form action="{{route('register_user')}}" method="POST">
           @if(Session::has('success'))
           <div class="alert alert-success">{{Session::get('success')}}</div>
           @endif
